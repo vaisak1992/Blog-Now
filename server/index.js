@@ -15,6 +15,6 @@ mongoose.connect(process.env.Mongodb_Url).then((data)=>{
 })
 app.use(express.json())
 app.use('/api/Blog1',route)
-app.listen(5000,()=>{
-    console.log("port 5000 connected");
+app.listen(5001,()=>{
+    console.log("port 5001 connected");
 })
