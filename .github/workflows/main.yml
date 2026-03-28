@@ -96,7 +96,7 @@ jobs:
             echo "Starting new container..."
             sudo docker run -d \
               --name blog-backend \
-              -p 80:5001 \
+              -p 8080:5001 \
               --restart unless-stopped \
               $ECR_REGISTRY/$ECR_REPOSITORY:latest
             echo "Deployment successful!"
