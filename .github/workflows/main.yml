@@ -28,6 +28,11 @@ jobs:
       - name: Build Frontend
         working-directory: ./client
         run: CI=false npm run build
+
+      - name: Debug - List files        # ← ADD HERE
+        run: |
+          ls -la
+          ls -la ./client || echo "client folder not found"
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
